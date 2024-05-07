@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fdi-cecc <fdi-cecc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/07 09:36:33 by fdi-cecc          #+#    #+#             */
-/*   Updated: 2024/05/07 16:44:22 by fdi-cecc         ###   ########.fr       */
+/*   Created: 2024/05/07 15:23:45 by fdi-cecc          #+#    #+#             */
+/*   Updated: 2024/05/07 16:45:12 by fdi-cecc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <stdarg.h>
-# include <stdio.h>
-# include <unistd.h>
-# include <stddef.h>
-# include <stdlib.h>
-# include <string.h>
-# include <limits.h>
-# include "./libft/includes/libft.h"
-
-int	ft_printf(const char *fmt, ...);
-
-#endif
+int main()
+{
+	ft_printf("ciao ciao");
+	return (0);
+}

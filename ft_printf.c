@@ -6,7 +6,7 @@
 /*   By: fdi-cecc <fdi-cecc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 09:36:36 by fdi-cecc          #+#    #+#             */
-/*   Updated: 2024/05/07 11:23:52 by fdi-cecc         ###   ########.fr       */
+/*   Updated: 2024/05/07 16:44:53 by fdi-cecc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,9 @@ int	ft_printf(const char *fmt, ...)
 	va_start(args, fmt);
 	while (fmt[i])
 	{
-		len += ft_putchar(fmt[i]);
+		ft_putchar(fmt[i]);
 		i++;
+		len++;
 	}
 	return (len);
 }

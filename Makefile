@@ -6,11 +6,11 @@
 #    By: fdi-cecc <fdi-cecc@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/07 09:17:33 by fdi-cecc          #+#    #+#              #
-#    Updated: 2024/05/07 15:16:34 by fdi-cecc         ###   ########.fr        #
+#    Updated: 2024/05/07 16:44:57 by fdi-cecc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	libftprintf.a
+NAME		=	ft_printf.a
 
 SRCS 		= 	ft_printf.c
 
@@ -18,7 +18,7 @@ OBJS		=	$(SRCS:.c=.o)
 
 CC			=	cc
 
-CFLAGS		= 	-Wall -Wextra -Werror
+CFLAGS		= 	-Wall -Wextra -Werror -Ilibft/includes
 
 LIBFT_DIR	= 	libft
 
