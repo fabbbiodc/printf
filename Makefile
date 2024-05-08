@@ -6,11 +6,11 @@
 #    By: fdi-cecc <fdi-cecc@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/07 09:17:33 by fdi-cecc          #+#    #+#              #
-#    Updated: 2024/05/07 16:44:57 by fdi-cecc         ###   ########.fr        #
+#    Updated: 2024/05/08 11:50:03 by fdi-cecc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	ft_printf.a
+NAME		=	libftprintf.a
 
 SRCS 		= 	ft_printf.c
 
