@@ -6,7 +6,7 @@
 /*   By: fdi-cecc <fdi-cecc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/16 16:48:05 by fdi-cecc          #+#    #+#             */
-/*   Updated: 2024/05/16 23:14:51 by fdi-cecc         ###   ########.fr       */
+/*   Updated: 2024/05/16 23:16:05 by fdi-cecc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	ft_processfmt(const char *str, va_list *args, t_flags flag)
 	if (str[1] == 'c')
 		len += ft_printchar(va_arg (*args, int), flag);
 	else if (str[1] == 's')
-		len += ft_printstr(va_arg (*args char *), flag);
+		len += ft_printstr(va_arg (*args, char *), flag);
 	else if (str[1] == 'p')
 		len += ft_printptr(va_arg(*args, void *), flag);
 	else if (str[1] == 'd' || str[1] == 'i')
