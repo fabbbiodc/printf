@@ -6,7 +6,7 @@
 /*   By: fdi-cecc <fdi-cecc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/16 16:48:05 by fdi-cecc          #+#    #+#             */
-/*   Updated: 2024/05/16 23:16:05 by fdi-cecc         ###   ########.fr       */
+/*   Updated: 2024/05/20 16:15:32 by fdi-cecc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_processflags(t_flags *flag, const char *str, int *i)
 	else if (str[1] == '0')
 	{
 		flag->zerofill = ft_atoiptr(str + 2, i);
-		flag->zero = 0;
+		flag->zero = 1;
 	}
 	else if (str[1] == '-')
 	{
@@ -33,7 +33,7 @@ void	ft_processflags(t_flags *flag, const char *str, int *i)
 	else if (str[1] == '.')
 	{
 		flag->precision = ft_atoiptr(str + 2, i);
-		flag->minus = 1;
+		flag->dot = 1;
 	}
 }
 

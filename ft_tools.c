@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_flags.c                                         :+:      :+:    :+:   */
+/*   ft_tools.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fdi-cecc <fdi-cecc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/16 23:09:59 by fdi-cecc          #+#    #+#             */
-/*   Updated: 2024/05/16 23:11:14 by fdi-cecc         ###   ########.fr       */
+/*   Updated: 2024/05/20 12:30:32 by fdi-cecc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,24 @@ int	ft_checkflags(char c, char *str)
 		i++;
 	}
 	return (0);
+}
+
+int	ft_putnbrlen(long n)
+{
+	int		i;
+	long	nbr;
+
+	i = 0;
+	nbr = n;
+	if (n < 0)
+	{
+		i += ft_putcharlen('-');
+		nbr = -nbr;
+	}
+	if (nbr >= 10)
+		i += ft_putnbrlen(nbr / 10);
+	i += ft_putcharlen((nbr % 10) + '0');
+	return (i);
 }
 
 void	ft_initflags(t_flags *flag)
@@ -54,4 +72,10 @@ int	ft_atoiptr(const char *str, int *adv)
 		(*adv)++;
 	}
 	return (result);
+}
+
+int	ft_putcharlen(char c)
+{
+	write(1, &c, 1);
+	return (1);
 }

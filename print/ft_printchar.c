@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_printchar.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fdi-cecc <fdi-cecc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/07 09:36:36 by fdi-cecc          #+#    #+#             */
-/*   Updated: 2024/05/17 10:03:42 by fdi-cecc         ###   ########.fr       */
+/*   Created: 2024/05/17 09:54:52 by fdi-cecc          #+#    #+#             */
+/*   Updated: 2024/05/17 12:05:26 by fdi-cecc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf(const char *str, ...)
+int	ft_printchar(char c, t_flags flag)
 {
-	va_list	args;
-	int		i;
-	int		len;
+	int	i;
 
 	i = 0;
-	len = 0;
-	va_start(args, str);
-	while (str[i])
+	while (i + 1 < flag.width)
 	{
-		if (str[i] == '%')
-			len += ft_parse(str, &args, &i);
-		else
-		{
-			ft_putchar(str[i]);
-			len++;
-		}
+		ft_putchar(' ');
 		i++;
 	}
-	va_end (args);
-	return (len);
+	ft_putchar(c);
+	i++;
+	while (i < flag.left)
+	{
+		ft_putchar(' ');
+		i++;
+	}
+	return (i);
 }
