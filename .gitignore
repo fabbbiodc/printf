@@ -1,0 +1,5 @@
+# Ignore all files containing "test" in their name
+*test*
+
+# Ignore all object files
+*.o
