@@ -6,7 +6,7 @@
 /*   By: fdi-cecc <fdi-cecc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 15:36:32 by fdi-cecc          #+#    #+#             */
-/*   Updated: 2024/05/20 16:13:50 by fdi-cecc         ###   ########.fr       */
+/*   Updated: 2024/05/20 19:02:28 by fdi-cecc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,9 +54,13 @@ int	ft_printptr(void *ptr, t_flags flag)
 	int		i;
 	int		len;
 
-	address = (long unsigned)ptr;
 	i = 0;
+	address = (long unsigned)ptr;
 	len = ft_hexlen((address) + 2);
+	if (ptr == 0)
+	{
+		return (ft_printstrlen("(nil)"));
+	}
 	while (len + i < flag.width)
 		i += ft_putcharlen(' ');
 	i += ft_printstrlen("0x");
